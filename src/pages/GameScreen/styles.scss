@@ -1,0 +1,164 @@
+.sudoku-game {
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+
+  @media screen and (max-width: 768px) {
+    padding: 1rem;
+  }
+
+  .back-button {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    width: 2.5rem;
+    height: 2.5rem;
+    flex-shrink: 0;
+    background-color: #000;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      background-color: var(--color-primary);
+    }
+
+    svg {
+      width: 1.5rem;
+      height: 1.5rem;
+      margin-bottom: -0.3rem;
+      margin-left: -0.1rem;
+      path {
+        stroke: var(--color-text);
+      }
+    }
+
+    @media screen and (min-width: 768px) {
+      width: 3rem;
+      height: 3rem;
+
+      svg {
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+  }
+
+  .game-title {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+
+    @media screen and (max-width: 768px) {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  .game-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    width: 100%;
+
+    @media screen and (min-width: 1200px) {
+      display: grid;
+      grid-template-columns: 1fr 2fr 1fr;
+      gap: 4rem;
+    }
+
+    @media screen and (max-width: 1200px) {
+      max-width: 50vh;
+    }
+
+    @media screen and (max-height: 800px) {
+      max-width: 100%;
+      gap: 1rem;
+    }
+  }
+
+  .game-stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    @media screen and (min-width: 1200px) {
+      flex-direction: column;
+      max-height: 300px;
+      height: 100%;
+      align-items: flex-start;
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+
+      h5 {
+        font-size: 0.8rem;
+        color: var(--color-text-secondary);
+      }
+      p {
+        font-size: 1rem;
+        font-weight: 500;
+        color: var(--color-text);
+      }
+    }
+
+    .time {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-end;
+      gap: 0.8rem;
+
+      p {
+        min-width: 45px;
+      }
+
+      button {
+        background-color: var(--color-primary-light);
+        border: none;
+        outline: none;
+        cursor: pointer;
+
+        padding: 0;
+
+        height: 2rem;
+        width: 2rem;
+        border-radius: 50%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg {
+          width: 1.2rem;
+          height: 1.2rem;
+
+          margin-bottom: -0.3rem;
+          path {
+            fill: var(--color-primary);
+          }
+        }
+        &:hover {
+          background-color: var(--color-primary);
+          svg {
+            path {
+              fill: var(--color-text);
+            }
+          }
+        }
+      }
+    }
+  }
+}
