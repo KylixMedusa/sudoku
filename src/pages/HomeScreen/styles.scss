@@ -53,6 +53,17 @@
         font-size: 4.5rem;
       }
     }
+
+    @media screen and (max-width: 500px) {
+      .logo {
+        width: 150px;
+        height: 150px;
+      }
+
+      .home__title {
+        font-size: 2.3rem;
+      }
+    }
   }
 
   .button-container {
